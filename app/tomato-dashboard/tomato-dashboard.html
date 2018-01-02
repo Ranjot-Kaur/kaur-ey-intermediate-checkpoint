@@ -17,6 +17,14 @@
         </div>
         <div class="col-xs-12 col-sm-6">
             <!-- Add tomato chart directive -->
+			<tomato-chart 
+              ng-if="!vm.loading" 
+              data="vm.tomatoes" 
+              type="Line" 
+              header="Tomato Yield by Season"
+              horizontal-axis-label="Seasons"
+              vertical-axis-label="Ounces"
+            />
         </div>
     </div>
 </section>
