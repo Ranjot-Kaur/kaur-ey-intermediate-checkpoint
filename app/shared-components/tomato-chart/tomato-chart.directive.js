@@ -29,8 +29,15 @@
  
     function TomatoChartController(tomatoChartService) {
         var vm = this;
+		
         vm.chartData = tomatoChartService.getBarChartData(vm.data);
         vm.chartOptions = tomatoChartService.getChartOptions(
+            vm.horizontalAxisLabel, vm.verticalAxisLabel, 
+            vm.displayLegend
+        );
+		
+		vm.lineChartData = tomatoChartService.getLineChartData(vm.data);
+        vm.lineChartOptions = tomatoChartService.getLineChartData(
             vm.horizontalAxisLabel, vm.verticalAxisLabel, 
             vm.displayLegend
         );
