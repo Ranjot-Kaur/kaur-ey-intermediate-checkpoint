@@ -1,10 +1,10 @@
 (function() {
     'use strict';
- 
+
     angular
         .module('app')
         .directive('tomatoGrid', tomatoGrid);
- 
+
     function tomatoGrid() {
         var directive = {
             scope: {
@@ -17,14 +17,21 @@
             controllerAs: 'vm',
             templateUrl: './app/shared-components/tomato-grid/tomato-grid.directive.html'
         };
- 
+
         return directive;
     }
- 
+
     TomatoGridController.$inject = ['tomatoGridService'];
- 
+
     function TomatoGridController(tomatoGridService) {
-        var vm = this;
+      var vm = this;
+                
+vm.search="";
+vm.gridData=tomatoGridService.filterDataByFarm(vm.data,vm.listView);
+vm.gridDataCopy=angular.copy(vm.gridData);
+vm.updateTable=function(){
+vm.gridData= tomatoGridService.filterDataBySearchBox(vm.gridDataCopy,vm.search);
+
     }
- })();
- 
+                }
+})();

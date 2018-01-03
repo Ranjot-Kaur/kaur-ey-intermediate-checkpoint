@@ -27,16 +27,20 @@
             />
         </div>
     </div>
+	<div class="row">
+                <div class="col-xs-12 col-sm-12">
+                <uib-tabset active="active">                     
+                <uib-tab heading="{{::value.Title}}" ng-repeat="value in vm.farms" classes="btn">
+                <tomato-grid 
+                ng-if="!vm.loading" 
+                data="vm.tomatoes" 
+                list-view="value.Title"
+                />
+                </uib-tab>
+                </uib-tabset>
+                </div> 
+                </div>
 </section>
-<section class="container-fluid">
-<div class="row">
-	<div class="col-xs-12 col-sm-12">
-		<tomato-grid
-		 ng-if="!vm.loading"
-		 data=""
-		 listView=""
-		/>
-	</div>
-</div>
-</section>
+
+
 <!-- Add tomato grid directive -->

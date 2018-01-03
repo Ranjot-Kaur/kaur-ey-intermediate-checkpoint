@@ -66,8 +66,15 @@ h1 {
 
 .nav__logo {
 	width: 30px;
-	margin: -5px 0 5px 0;
+	margin: -5px 10px 5px 0;
 	vertical-align: 20px;
+	display: inline;
+	float: left;
+}
+
+.nav__logo__img{
+	width: 30px;
+	margin-top: 15px;
 }
 
 .tomato-chart {
@@ -170,4 +177,15 @@ h1 {
 		transform: scale(1.0);
 		-webkit-transform: scale(1.0);
 	}
+}
+.search-box{
+	margin-left:10px;
+}
+.tomato-table{
+	margin-top:15px;
+	margin-top:15px;
+}
+.search-table{
+	width: 50%;
+    margin: 10px auto;
 }

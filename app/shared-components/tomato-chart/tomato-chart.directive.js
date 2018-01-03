@@ -37,7 +37,7 @@
         );
 		
 		vm.lineChartData = tomatoChartService.getLineChartData(vm.data);
-        vm.lineChartOptions = tomatoChartService.getLineChartData(
+        vm.lineChartOptions = tomatoChartService.getChartOptions(
             vm.horizontalAxisLabel, vm.verticalAxisLabel, 
             vm.displayLegend
         );
