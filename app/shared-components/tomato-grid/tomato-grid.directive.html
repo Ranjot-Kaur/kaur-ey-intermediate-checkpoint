@@ -4,7 +4,7 @@
 <tr>                                    
 <td class="search-label"><b> Search: </b></td>
 <td></td>
-<td class="search-box"> <input class="form-control" type="text" ng-model="vm.search" ng-change="vm.updateTable()"> </td> 
+<td class="search-box"> <input class="form-control" type="text" ng-model="searchText"> </td> 
 <td></td>
 </tr>
 </table>
@@ -19,7 +19,7 @@
 </tr>
 </thead>
 <tbody>
-<tr dir-paginate="value in vm.gridData | itemsPerPage: 15" pagination-id="vm.listView" >
+<tr dir-paginate="value in vm.gridData | filter: searchText | itemsPerPage: 15" pagination-id="vm.listView" >
 <td>{{ ::value.color.Title }}</td>
 <td>{{ ::value.cost }}</td>
 <td>{{ ::value.ounces }}</td>
